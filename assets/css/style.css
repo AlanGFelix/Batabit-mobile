@@ -403,7 +403,8 @@ main{
 .section--image-container span{
   position: absolute;
   top: 16%;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 
   font-weight: var(--medium);
   font-size: 24px;
@@ -414,7 +415,7 @@ main{
 
 .section--image-container img{
   width: 100%;
-  height: 387px;
+  height: 10%;
 }
 
 .main--plan-section{
