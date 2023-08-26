@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" defer>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" defer>
   <title>Document</title>
 </head>
 <body>
@@ -16,12 +16,12 @@
     <section class="header--title-container">
       <h1>La próxima revolución en el intercambio de criptomonedas.</h1>
       <p>Batatabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
-      <div class="header--button-container"><a href="#" class="header--button">Conoce nuestros planes</a><img class="header--button-arrow" src="./assets/icons/mdi_keyboard_arrow_down.png"></div>
+      <label class="header--button-container" for="button-plans"><a href="#plans-container" class="header--button" id="button-plans">Conoce nuestros planes</a><img class="header--button-arrow" src="./assets/icons/mdi_keyboard_arrow_down.png"></label>
     </section>
   </header>
   <main>
     <section class="main--exchange-section">
-      <img class="exchange--image-bitcoin" src="./assets/images/Bitcoin.svg" alt="">
+      <img class="exchange--image-bitcoin" src="./assets/images/Bitcoin.svg" alt="Crypto network">
       <section class="exchange--title-section">
         <div class="main--title-container">
           <h2>Visibilizamos todas las tasas de cambio</h2>
@@ -34,19 +34,19 @@
           <tbody>
             <tr>
               <td>Bitcoin</td>
-              <td><span>$ 1.96</span><img src="./assets/icons/trending-down.jpg"></td>
+              <td><span>$ 1.96</span><img src="./assets/icons/trending-down.jpg" alt="decreacing"></td>
             </tr>
             <tr>
               <td>Ethereum</td>
-              <td><span>$ 0.07</span><img src="./assets/icons/trending-up.png"></td>
+              <td><span>$ 0.07</span><img src="./assets/icons/trending-up.png" alt="rising"></td>
             </tr>
             <tr>
               <td>Ripple</td>
-              <td><span>$ 2.15</span><img src="./assets/icons/trending-down.jpg"></td>
+              <td><span>$ 2.15</span><img src="./assets/icons/trending-down.jpg" alt="decreacing"></td>
             </tr>
             <tr>
               <td>Stellar</td>
-              <td><span>$ 4.96</span><img src="./assets/icons/trending-down.jpg"></td>
+              <td><span>$ 4.96</span><img src="./assets/icons/trending-down.jpg" alt="decreacing"></td>
             </tr>
           </tbody>
         </table>
@@ -96,9 +96,11 @@
         <h2>Escoge el plan que mejor se ajuste a ti.</h2>
         <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
       </section>
-      <section class="section--plans-container">
+      <section class="section--plans-container" id="plans-container">
         <section class="section--plans">
-          <div><img src="./assets/icons/mdi_keyboard_arrow_down.png" alt="Toogle plans left"></div>
+          <div class="plans--toggle-left">
+            <img src="./assets/icons/mdi_keyboard_arrow_down.png" alt="Toogle plans left">
+          </div>
           <div class="section--plan-container">
             <span >Recomendado</span>
             <h3>Pago Anual</h3>
@@ -106,7 +108,9 @@
             <p>*Ahorras 129 comparado al plan mensual.</p>
             <div>Escoger este<img src="./assets/icons/arrow-right.png" alt="Choose Plan"></div>
           </div>
-          <div><img src="./assets/icons/mdi_keyboard_arrow_down.png" alt="Toogle plans right"></div>
+          <div class="plans--toggle-right">
+            <img src="./assets/icons/mdi_keyboard_arrow_down.png" alt="Toogle plans right">
+          </div>
         </section>
       </section>
     </section>
