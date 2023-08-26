@@ -160,46 +160,101 @@ main{
   width: 100%;
 }
 
-.exchange--table-section h2{
+.exchange--table-container{
+  position: relative;
+
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.exchange--table-container h2{
   font-size: 18px;
   font-weight: var(--bold);
   width: 65%;
 
-  margin-left: 35px;
+  margin-left: 1.5rem;
   margin-bottom: 10px;
 
   color: var(--bitcoin-primary);
 }
 
-.exchange--table-container{
-  display: flex;
-  justify-content: center;
-
+.exchange--table-container table{
   width: 100%;
-}
-
-.exchange--table-section table{
-  width: 60%;
+  height: calc(100% - 2.4rem);
   border-radius: 5px;
+}
 
-  font-size: 16px;
+.exchange--table-container td{
+  width: 50%;
+  line-height: 1.9rem;
+  font-size: 1.6rem;
   font-weight: var(--medium);
-  background-color: var(--just-white);
   color: var(--grey);
+  text-align: center;
+  background-color: var(--just-white);
 }
 
-.exchange--table-section td{
-  padding: 10px 12px;
-}
-
-.exchange--table-section td{
-  font-size: 14px;
-}
-
-.exchange--table-section img{
+.exchange--table-container img{
   width: 12px;
   height: 12px;
   margin-left: 5px;
+}
+
+.commission--table-container{
+  display: none;
+  position: relative;
+
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.commission--table-container table{
+  width: 100%;
+  height: calc(100% - 2.4rem);
+  border-radius: 5px;
+}
+
+.commission--table-container h2{
+  font-size: 18px;
+  font-weight: var(--bold);
+  width: 65%;
+
+  margin-left: 1.5rem;
+  margin-bottom: 10px;
+
+  color: var(--bitcoin-secondary);
+}
+
+.commission--table-container td{
+  width: 50%;
+  line-height: 1.9rem;
+  font-size: 1.6rem;
+  font-weight: var(--medium);
+  color: var(--grey);
+  text-align: center;
+  background-color: var(--just-white);
+}
+
+.commission--table-container tr:first-child td:first-child{
+  border-radius: 10px 0 0 0;
+}
+
+.commission--table-container tr:first-child td:last-child{
+  border-radius: 0 10px 0 0;
+}
+
+.commission--table-container tr:last-child td:first-child{
+  border-radius: 0 0 0 10px;
+}
+
+.commission--table-container tr:last-child td:last-child{
+  border-radius: 0 0 10px 0;
 }
 
 .exchange--table-section .exchange--img-toggle{
@@ -207,10 +262,48 @@ main{
 
   position: absolute;
   top: 50%;
-  right: 8%;
+  right: 4%;
 
   width: 24px;
   height: 24px;
+  z-index: 2;
+}
+
+.exchange--img-toggle.arrow-left{
+  position: absolute;
+  top: 50%;
+  left: 4%;
+
+  transform: rotate(180deg);
+}
+
+#exchange--input-toggle-left{
+  display: none;
+}
+
+#exchange--input-toggle-left:checked + .exchange--img-toggle{
+  display: none;
+  
+}
+
+#exchange--input-toggle-right{
+  display: none;
+}
+
+#exchange--input-toggle-right:checked + .exchange--img-toggle{
+  display: none;
+}
+
+.exchange--table-section:has(#exchange--input-toggle-right:checked) .commission--table-container{
+  display: block;
+}
+
+.exchange--table-section:has(#exchange--input-toggle-right:checked) .exchange--table-container{
+  display: none;
+}
+
+.exchange--table-section:has(#exchange--input-toggle-right:checked) + .main--update-section{
+  background-color: var(--soft-secondary);
 }
 
 .main--update-section{
